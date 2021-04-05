@@ -29,11 +29,12 @@ BASE_APPS = [
 ]
 
 LOCAL_APPS = [
-
+    'apps.user',
 ]
 
 THIRD_APPS = [
-    'rest_framework',    
+    'rest_framework',
+    'simple_history',
 ]
 
 INSTALLED_APPS = BASE_APPS + LOCAL_APPS + THIRD_APPS
@@ -101,6 +102,7 @@ USE_L10N = True
 
 USE_TZ = True
 
+AUTH_USER_MODEL = 'user.User'
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
